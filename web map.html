@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Desa Klapagading Kulon</title>
+    <style>
+        /* Warna dan Variabel Global */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #ecf0f1;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --header-bg: url('https://cdns.klimg.com/mav-prod-resized/0x0/ori/newsOg/2024/5/3/1714708457682-76pyv.jpeg'); /* Memperluas gambar latar belakang */
+        }
+
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        header {
+            background: var(--header-bg) no-repeat center center/cover;
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 4rem 1rem; /* Menambah padding untuk header */
+        }
+
+        header h1 {
+            font-size: 3rem;
+        }
+
+        header p {
+            margin-top: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .welcome-text {
+            position: absolute;
+            top: 30%; /* Menyesuaikan posisi teks selamat datang */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--primary-color);
+            padding: 1rem 2rem;
+            color: var(--secondary-color);
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            padding: 0.5rem 1rem;
+            transition: background 0.3s;
+        }
+
+        .nav-links li a:hover {
+            background: var(--accent-color);
+            border-radius: 4px;
+        }
+
+        .section {
+            padding: 2rem 1rem;
+        }
+
+        .section.bg-light {
+            background: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center; /* Mengatur konten menjadi rata tengah */
+        }
+
+        .activities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .activity {
+            background: var(--secondary-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .activity img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .activity h3 {
+            margin-top: 0.8rem;
+            color: var(--primary-color);
+        }
+
+        .footer {
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
+
+            .hamburger span {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background: var(--secondary-color);
+                margin: 4px 0;
+            }
+        }
+
+        .hamburger {
+ display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Desa Klapagading Kulon</h1>
+        <p>Desa yang damai dan sejahtera dengan kekayaan alam melimpah</p>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h2 class="logo">Desa Klapagading Kulon</h2>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#profil">Profil Desa</a></li>
+            <li><a href="#sejarah">Sejarah</a></li>
+            <li><a href="#visi-misi">Visi & Misi</a></li>
+            <li><a href="#kegiatan">Kegiatan</a></li>
+            <li><a href="#map">Peta</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Profil Desa -->
+        <section id="profil" class="section">
+            <div class="container">
+                <h2>Profil Desa</h2>
+                <p>Desa Klapagading Kulon adalah desa yang kaya akan budaya, tradisi, dan kekayaan alamnya. Terletak di dataran tinggi, desa ini menjadi destinasi favorit bagi wisatawan lokal maupun internasional.</p>
+            </div>
+        </section>
+
+        <!-- Sejarah -->
+        <section id="sejarah" class="section bg-light">
+            <div class="container">
+                <h2>Sejarah Desa</h2>
+                <p>Desa Klapagading Kulon memiliki sejarah yang panjang dan kaya. Didirikan pada abad ke-18, desa ini awalnya merupakan tempat berkumpulnya para petani yang mencari lahan subur untuk bercocok tanam. Seiring berjalannya waktu, desa ini berkembang menjadi komunitas yang harmonis dengan berbagai tradisi dan budaya yang masih dilestarikan hingga saat ini.</p>
+            </div>
+        </section>
+
+        <!-- Visi -->
+        <section id="visi" class="section">
+            <div class="container">
+                <h2>Visi</h2>
+                <p>Menjadikan Desa Klapagading Kulon sebagai desa yang maju, sejahtera, dan berdaya saing global.</p>
+            </div>
+        </section>
+
+        <!-- Misi -->
+        <section id="misi" class="section bg-light">
+            <div class="container">
+                <h2>Misi</h2>
+                <ul>
+                    <li>Meningkatkan kesejahteraan masyarakat melalui pemberdayaan ekonomi lokal.</li>
+                    <li>Melestarikan budaya dan tradisi leluhur.</li>
+                    <li>Mengembangkan pariwisata berbasis alam dan budaya.</li>
+                    <li>Meningkatkan akses pendidikan dan kesehatan bagi masyarakat.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Kegiatan Desa -->
+        <section id="kegiatan" class="section">
+            <div class="container">
+                <h2>Kegiatan Desa</h2>
+                <div class="activities">
+                    <div class="activity">
+                        <img src="https://cdn.rri.co.id/berita/52/images/1687065334488-7a6c873b-7c18-498a-9b7a-81126f5a27b6/1687065334488-7a6c873b-7c18-498a-9b7a-81126f5a27b6.jpeg" alt="Festival Panen Raya">
+                        <h3>Festival Panen Raya</h3>
+                        <p>Perayaan tahunan untuk menghormati hasil panen desa.</p>
+                    </div>
+                    <div class="activity">
+                        <img src="https://infopublik.id/assets/upload/headline//bimtek_kerajinan_bambu.jpeg" alt="Pelatihan Kerajinan">
+                        <h3>Pelatihan Kerajinan</h3>
+                        <p>Kegiatan untuk meningkatkan keterampilan masyarakat.</p>
+                    </div>
+                    <div class="activity">
+                        <img src="https://cdn.idntimes.com/content-images/community/2023/11/snapinstaapp-312979133-1533427687083150-576689040429546202-n-1080-41de55f2c34bd9d1bd2b234d79dab910-88f43d2f46a090be50f55ca4f95f1a5d_600x400.jpg">
+                        <h3>Pesta Budaya</h3>
+                        <p>Perayaan budaya lokal dengan berbagai pertunjukan seni.</p>
+                    </div>
+                    <div class="activity">
+                        <img src="https://pekalongankota.go.id/upload/berita/berita_20220810040716.jpeg" alt="Lomba Olahraga">
+                        <h3>Lomba Olahraga</h3>
+                        <p>Kegiatan olahraga untuk meningkatkan kebugaran masyarakat.</p>
+                    </div>
+                    <div class="activity">
+                        <img src="https://mmc.kalteng.go.id/files/berita/29112022032132_0.jpg" alt="Bazar Desa">
+                        <h3>Bazar Desa</h3>
+                        <p>Tempat berkumpulnya para pedagang lokal untuk menjual produk mereka.</p>
+                    </div>
+                    <div class="activity">
+                        <img src="https://dinkes.pekalongankota.go.id/upload/berita/berita_20221128120619.jpg" alt="Kegiatan Lingkungan">
+                        <h3>Kegiatan Lingkungan</h3>
+                        <p>Program untuk menjaga kebersihan dan kelestarian lingkungan desa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Peta -->
+        <section id="map" class="section bg-light">
+            <div class="container">
+                <h2>Peta Batas Administrasi</h2>
+                <iframe src="https://desaklapagadingkulon1.vercel.app" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Kontak -->
+        <section id="kontak" class="section">
+            <div class="container">
+                <h2>Kontak</h2>
+                <p>Email: info@desaklapagadingkulon.com</p>
+                <p>Telepon: 0812-3456-7890</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Desa Klapagading Kulon. Hak cipta dilindungi.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+        });
+    </script>
+</body>
+</html>
